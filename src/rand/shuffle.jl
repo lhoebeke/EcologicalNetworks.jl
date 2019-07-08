@@ -128,10 +128,10 @@ function shuffle!(N::BinaryNetwork; constraint::Symbol=:degree)
 end
 
 function quanti_shuffle_valid(a, i1, i2)
-    u1 = length(unique(i1)) == 2
-    u2 = length(unique(i2)) == 2
-    mi = minimum(a[i1,i2]) != zero(eltype(a))
-    return u1 & u2 & mi
+   u1 = length(unique(i1)) == 2
+   u2 = length(unique(i2)) == 2
+   mi = minimum(a[i1,i2]) != zero(eltype(a))
+   return u1 & u2 & mi
 end
 
 """
